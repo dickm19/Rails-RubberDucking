@@ -1,0 +1,13 @@
+<h1>duck Show</h1>
+
+<% if flash[:success] %>
+  <h2 style="color:green;"><%= flash[:success] %></h2>
+<% end %>
+
+<h3><%= @duck.name %></h3>
+<p>Description: <%= @duck.description %></p>
+<p>Student: <%= @duck.student.name %></p>
+
+
+<%= button_to "DELETE", duck_path(@duck), method: :delete %>
+
